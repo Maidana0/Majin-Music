@@ -7,9 +7,9 @@ const listaMensajes = document.getElementById('listaMensajes')
 contacto.forEach ( (mensajes ) => {
     const li = document.createElement ('li')
     li.innerHTML = ` <h1> ${mensajes.nombre} </h1> <hr>
-    <h2><span class="letraMsj"> Email:   </span>  ${mensajes.email}  </h2>
-    <h2><span class="letraMsj"> Motivo:  </span>  ${mensajes.motivo} </h2>
-    <h2><span class="letraMsj"> Mensaje: </span>  ${mensajes.mensaje}</h2>
+    <h2><span class="letraMsj"> Email:   </span>  ${mensajes.email}   </h2>
+    <h2><span class="letraMsj"> Motivo:  </span>  ${mensajes.motivo}  </h2>
+    <h2><span class="letraMsj"> Mensaje: </span>  ${mensajes.mensaje} </h2>
     <br>`
     listaMensajes.append (li)
 } )

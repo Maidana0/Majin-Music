@@ -17,5 +17,30 @@ const guardarMensaje = (e) => {
         msjViejos.push (contacto)
     localStorage.setItem ('mensaje', JSON.stringify (msjViejos) )
      formContact.reset()
+
+     Toastify({
+        text: 'Mensaje Enviado!!',
+        duration: 2500,
+        gravity: "bottom",
+        position: "right",
+        style: {
+            background: "black",
+            color: "yellow",
+            border: "solid 1.5px yellow",
+            margin: "13vh 2vh",
+        },
+    }).showToast()
 }
-guardar.addEventListener ('click', guardarMensaje)
+guardar.addEventListener ('click', (guardarMensaje) )
+
+
+
+
+
+
+
+
+
+
+
+

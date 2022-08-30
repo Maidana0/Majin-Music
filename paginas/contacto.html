@@ -7,17 +7,15 @@
     <title>Maidana</title>
     <link rel="icon" type="image/x-icon" href=".././imagenes/log1.png">
     <link rel="stylesheet" href="../style.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Silkscreen&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,7 +26,7 @@
         <nav class="menu">
             <a class="div1" href="../index.html">
                <img class="cara" src=".././imagenes/cara.png"> <i>[ Majin - Music ]</i> </a>
-            <a class="div2" href="./mensajes.html"> Mensajes </a>
+            <a id="msj" class="div2 no" href="./mensajes.html"> Mensajes </a>
             <a class="div3" > Rock </a>
             <a class="div4"> Nacional </a>
 
@@ -37,8 +35,9 @@
 
             <nav class="celu">
                 <a class="celu0" href="../index.html"><img class="cara" src=".././imagenes/caracelu.png"> <i>[Majin - Music] </a>
-                   <div class="celu1">   <img class="menubtn" src=".././imagenes/menu.png">
-                    </div>
+                <div class="celu1">   <img class="menubtn" src=".././imagenes/menu.png">
+
+                </div>
                 </nav>
 
     </header>
@@ -51,7 +50,7 @@
                 <input class="contacto" id="nombre"  name="nombre" type="text" tabindex="1" autocomplete="off" placeholder="Nombre">
                 <input class="contacto" id="email"  name="email" type="text" tabindex="2" autocomplete="off" placeholder="Email">
                 <input class="contacto" id="motivo"  name="motivo" type="text" tabindex="3" autocomplete="off" placeholder="Motivo de contacto">
-                <input class="contacto" id="mensaje"  name="nombre" type="text" tabindex="4" autocomplete="off" placeholder="Mensaje">
+                <textarea class="contacto" id="mensaje"  name="mensaje" rows="4" maxlength="250" minlength="3" tabindex="4" autocomplete="off" placeholder="Mensaje"></textarea>
                 <button type="submit"  class="boton corto enviar">Enviar</button> 
             </form>
 
@@ -64,8 +63,12 @@
            <img class="insta" src=".././imagenes/instagram.png" > </a>
         
     </footer>
+
+
     <script src="../js/contacto.js"></script>
     <script src="../js/global.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>
 
