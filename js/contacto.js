@@ -14,8 +14,10 @@ const guardarMensaje = (e) => {
         const motivo    = contactMotivo.value
         const mensaje   = contactMensaje.value
         const contacto  = {nombre,email,motivo,mensaje}
-        msjViejos.push (contacto)
-    localStorage.setItem ('mensaje', JSON.stringify (msjViejos) )
+
+    msjViejos.push (contacto)
+
+     localStorage.setItem ('mensaje', JSON.stringify (msjViejos) )
      formContact.reset()
 
      Toastify({
@@ -26,21 +28,16 @@ const guardarMensaje = (e) => {
         style: {
             background: "black",
             color: "yellow",
-            border: "solid 1.5px yellow",
+            boxShadow: "0px 0px 3px 3px yellow",
             margin: "13vh 2vh",
+            fontFamily: 'Rajdhani', 
+            fontWeight: '900',
         },
-    }).showToast()
+    }).showToast() 
+    
 }
-guardar.addEventListener ('click', (guardarMensaje) )
 
 
-
-
-
-
-
-
-
-
+ guardar.addEventListener ('click', (guardarMensaje) )
 
 

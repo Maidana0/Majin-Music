@@ -12,6 +12,16 @@ body{
     background-size: cover;}
 footer { margin-top: auto }
 
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('./imagenes/loadingg.gif') 50% 50% no-repeat pink;
+    opacity: .8;
+}
 /* SCROLL */
 *::-webkit-scrollbar {width: 5px; height: 5px; }
 *::-webkit-scrollbar-track {background: black; }
@@ -49,6 +59,9 @@ a{text-decoration: none;}
        background-color: rgba(255, 255, 0, 0.767);
        color: black;
     }
+
+
+
 /* ---------------------------- */
 .formulario::placeholder{color: yellow;}
 .formulario{
@@ -66,10 +79,11 @@ a{text-decoration: none;}
 .formulario:hover{ transform: scale(1.05);}
 input{border: 0;}
 input:focus{outline: none; background-color: black }
-textarea{border: 0;height: auto; width: auto;}
+textarea{border: 0;height: auto; width: auto; resize: none;}
 textarea:focus{outline: none; background-color: black }
 .msju{border: solid 1px yellow; max-width: 10vh;}
 /* ---------------------------- */
+
 #inicio{
     margin: 5vh auto 6vh;
     padding-bottom: 5vh;
@@ -86,16 +100,33 @@ textarea:focus{outline: none; background-color: black }
     align-items: center;
 
 }
-
-
-
+#loading {
+    max-width: 95%;
+    margin: 2vh;
+    box-shadow: 0px 0px 5px 5px pink;
+    animation-name: carga;
+    transition: all 0.3s;
+    animation-duration: 0.3s;   
+}@keyframes carga {
+    0% {
+      transform:scale(0.3)}
+    25% {
+        transform:scale(0.5)}
+    50% {
+        transform:scale(0.7)}
+    75% {
+        transform:scale(0.9)}
+    100% {
+        transform:scale(1)}
+    }
+.todo {display:flex; flex-direction: column; width: 100%;}
 
 
 
 
 .centrar {display: flex; justify-content: center; align-items: center;
     text-align: center;}
-    .esperando{max-width: 50vh; max-height: 80vh;}
+.esperando{max-width: 50vh; max-height: 80vh;}
 .holaT{
     font-size: 250%; color:black;
     font-weight: 900;
@@ -152,7 +183,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
     height: 85%;
 }
 .atras{color:rgb(255, 61, 61); padding: 1.5vh;}
-.sub{font-size: 200%; padding-left: 2vh ;}
+.sub{font-size: 200%; padding-left: 2vh; margin: 2vh;}
 .subtitulo{display: flex; flex-direction: row;
         justify-content: space-between; color: white;
         font-family: 'Silkscreen', cursive;
@@ -179,7 +210,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
 .contacto::placeholder{color: yellow;font-size: small;}
 #formContact {width: 75%;}
 #contacto{
-    margin: 5vh auto 9vh; 
+    margin: 5vh auto 5vh; 
     padding: 1vh 1vh 5vh 1vh;
     width: 70%;
     background-color: rgba(0, 0, 0, 0.822);
@@ -231,6 +262,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
     filter: brightness(0%);
     -webkit-filter: brightness(0%);
     -moz-filter: brightness(0%);}
+    
 .celu0:hover{background-color: rgba(255, 255, 0, 0.767); 
 color: black;}
 .celu0 { grid-area: 1 / 1 / 2 / 8;  color:white;   text-align: center; padding:1.3vh 0vh 1vh 1vh;}
@@ -239,6 +271,9 @@ color: black;}
     padding:1.5vh 2.5vh 1.5vh 2.5vh;
     max-width: 6vh;
     max-height: 6vh;
+    position: relative;
+    cursor: pointer;
+    vertical-align: top;
 }
 
 .msj{ color: white; font-family: 'Rajdhani', sans-serif; ;
@@ -247,20 +282,54 @@ color: black;}
 .sub{border-bottom: solid 2px; margin-left: 1.5vh; margin-bottom: 6vh; }    
 #listaMensajes { margin-left: 5vh;padding-bottom: 5vh; }    
 .letraMsj{color: yellow; margin-right: 1vh; margin-bottom: 1vh;} 
-
-
-
-
-
+#borrar { width: 30vh; font-size: smaller;}
 
 .no{display: none;}
 .celu{display: none;}
+
+.listaD{
+    position: absolute;
+    top: 5; right: 0;
+    background-color: rgba(0, 0, 0, 0.849);
+    box-shadow: -2px 1px 4px 4px yellow;
+    width: 40%; height: auto;
+    text-align: left;
+    margin-top: 0.7vh;
+    font-weight: 700;
+    font-family: 'Silkscreen', cursive;
+    text-decoration: none;   
+}
+
+
+  
+.listita{
+    display: flex; flex-direction: column;
+    font-size:80%;
+    width: 100%;
+}
+.listita a{
+    text-decoration: none;
+    color: white;
+    padding: 2.5vh 0vh 2.5vh 2vh;
+    border-bottom: solid 1px white;
+    width: 85%;
+}
+.listita a:hover{
+    background-color: rgba(255, 255, 0, 0.993);
+    color: black;
+    padding-left: 3.5vh;
+}
+
+#exito{
+    border-color: red;
+    font-size: medium;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%
+}
+
+
 @media only screen and (max-width: 768px) {.celu{display:grid;} .menu{display:none}
-
-
-
-
-
 
 }
 @media only screen and (max-width: 480px) {.sub{font-size: 100%;}}

@@ -7,17 +7,13 @@
     <title>Maidana</title>
     <link rel="icon" type="image/x-icon" href=".././imagenes/log1.png">
     <link rel="stylesheet" href="../style.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Silkscreen&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,12 +25,12 @@
         <nav class="menu">
             <a class="div1" href="../index.html">
                <img class="cara" src=".././imagenes/cara.png"> <i>[ Majin - Music ]</i> </a>
-            <a id="msj" class="div2 no" href="#"> Mensajes </a>
-            <a class="div3" href="./listas.html"> Listas</a>
-            <a class="div4" href="./artistas.html"> Artistas </a>
+            <a id="msj" class="div2 no" href="./mensajes.html"> Mensajes </a>
+            <a class="div3" href="./listas.html"> Listas </a>
+            <a class="div4" href="#"> Artistas</a>  
             <a class="div5" href="./contacto.html"> Contacto </a>
             </nav>
-    
+
             <nav class="celu">
                 <a class="celu0" href="../index.html">
                     <img class="cara" src=".././imagenes/caracelu.png"> <i>[Majin - Music]                         
@@ -44,34 +40,27 @@
                 </div>
                     <div id="menuC" class="listaD no"> 
                         <div class="listita">
-                            <a id="msjC" class="no" href="#">Mensajes</a> </li>
+                            <a id="msjC" class="no" href="../paginas/mensajes.html">Mensajes</a> </li>
                             <a href="../paginas/listas.html">Listas</a></li>
-                            <a href="../paginas/artistas.html">Artistas</a></li>
+                            <a href="#">Artistas</a></li>
                             <a href="../paginas/contacto.html">Contacto</a> </li>
                         </div>
                         <button id="exito" class="boton centrar" type="button"> Cerrar</button>
                     </div> 
             </nav>
-         
+
     </header>
 
     <main>
+    
 
-        <div id="inicio"> 
-            <div id="content" class="centrar"> Lista de Mensajes </div>
-                <div class="msj">
-                <h2 class="sub">Mensajes Recibidos:</h2>
-                   
-                <ul id="listaMensajes" > 
+            <div id="inicio"> 
+                <img src="../imagenes/loading.gif">
+            </div>
 
-                </ul>
-                </div>
-                <div id="borrar">
-                    <button class="boton" type="button">Borrar Todo</button>
-                </div> 
-        </div>
+         <div id="salir"><button class="boton corto no" type="button">Salir</button></div> 
         
-        <div id="salir"><button class="boton corto no" type="button">Salir</button></div> 
+
     </main>
 
     <footer class="pie">
@@ -79,14 +68,18 @@
            <img class="insta" src=".././imagenes/instagram.png" > </a>
         
     </footer>
-    <script src="../js/mensajes.js"></script>
-    <script src="../js/global.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            $(".loader").fadeOut("slow");
-        });
-    </script>     
+
+
+
+   
+<script src="../js/global.js"></script>
+<script src="../js/listas.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    });
+</script>     
 </body>
 
 

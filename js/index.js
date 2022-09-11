@@ -5,6 +5,11 @@ const inputNombre   = document.querySelector ('#nombre')
 const formNombre    = document.querySelector ('#formulario')
 let usuario         = localStorage.getItem ('usuario')
 const logOut         = document.querySelector ('#salir button')
+const msj = document.querySelector ('#msj')
+const msjC   = document.querySelector ('#msjC')
+
+usuario == "Nino00" && msjC.classList.remove("no")
+usuario == "Nino00" && msj.classList.remove("no")
 
 if (!usuario)  {
     formNombre.addEventListener ('submit', (e) => {
@@ -18,6 +23,7 @@ if (!usuario)  {
                         generos.className   = "generos"
                         formNombre.classList.add("no") 
                         logOut.classList.remove ("no")
+                        nombreF == "Nino00" && location.reload()       
                 }       
                 else { hola.innerHTML = 
 '<img src="./imagenes/esperando.png" class="esperando"> <p> Vuelva a Intentarlo.</p>'}                                  
@@ -37,7 +43,7 @@ const salir = document.querySelector ('#salir')
                         localStorage.removeItem ('usuario')
                         location. reload() }    
                         )
-
+                        
 //------------------------------------------------------------------------------
 function cerrar () {        content.classList.add ("no"),
                             generos.className = "no"
@@ -49,8 +55,12 @@ function cerrar () {        content.classList.add ("no"),
                             hola.innerHTML =  "Bienvenidx a nuestro sitio de música!!!"
                         }                            
 
+//-------------------------------------------
+
+
 const botonOtros = document.querySelector ('.otros')
-botonOtros.onclick      = () => {listaOtros.classList.remove ("no"), cerrar() }
+ botonOtros.onclick      = () => {listaOtros.classList.remove ("no"), cerrar() } 
+
         const cerrarOtros       = document.querySelector ('#listaOtros button')
         cerrarOtros.onclick     = () => {listaOtros.classList.add ("no"), abrir()}
         
@@ -68,11 +78,25 @@ const botonReggae = document.querySelector ('.reggae')
 botonReggae.onclick     = () => {listaReggae.classList.remove ("no"),cerrar()}
         const cerrarReggae      = document.querySelector ('#listaReggae button')
         cerrarReggae.onclick    = () => {listaReggae.classList.add ("no"),abrir()}
-//-----------------------------------------------------------------------------
 
 
+//-------------------------------------------
+const loading = document.querySelector ("#loading")
+
+const menubtn = document.querySelector ('#menuBtn')
+const listita = document.querySelector ('#menuC')
+
+menubtn.addEventListener('click', ()=>{
+    listita.classList.remove('no')
 
 
-const msj = document.querySelector ('#msj')
-usuario == "Nino00" && msj.classList.remove("no")
+})
+
+const exito = document.querySelector ('#exito')
+exito.addEventListener('click', ()=>{
+    listita.classList.add('no')
+
+
+})
+
 

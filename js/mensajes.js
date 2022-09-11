@@ -15,5 +15,13 @@ contacto.forEach ( (mensajes ) => {
 } )
 }
 
+//
+
+const borrar = document.querySelector ('#borrar')
+borrar.addEventListener ('click', () => {
+                        localStorage.removeItem ('mensaje')
+                        location. reload() }    
+                        )
+
 
 
