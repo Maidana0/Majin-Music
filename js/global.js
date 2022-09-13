@@ -2,9 +2,7 @@ const salir = document.querySelector ('#salir')
 const logOut= document.querySelector ('#salir button')
 let usuario = localStorage.getItem ('usuario')
 const msj   = document.querySelector ('#msj')
-const msjC   = document.querySelector ('#msjC')
 
-usuario == "Nino00" && msjC.classList.remove("no")
 usuario == "Nino00" && msj.classList.remove("no")                        
 usuario && logOut.classList.remove ("no")
 
@@ -14,21 +12,18 @@ salir.addEventListener ('click', () => {
                         )
 
 
+//-------------------- MENU --------------------
 
-const menubtn = document.querySelector ('#menuBtn')
-const content = document.querySelector ('#menuC')
-
-menubtn.addEventListener('click', ()=>{
-    content.classList.remove('no')
-
-
-})
-
-const exito = document.querySelector ('#exito')
-exito.addEventListener('click', ()=>{
-    content.classList.add('no')
-
-
-})
-
-
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+                        
+navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("nav-menu_visible");
+                        
+            if (navMenu.classList.contains("nav-menu_visible")) {
+                navToggle.setAttribute("aria-label", "Cerrar menú");
+            } else {
+                 navToggle.setAttribute("aria-label", "Abrir menú");
+                  }
+});
+//-------------------- MENU --------------------                       

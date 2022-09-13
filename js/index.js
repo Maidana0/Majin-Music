@@ -6,9 +6,7 @@ const formNombre    = document.querySelector ('#formulario')
 let usuario         = localStorage.getItem ('usuario')
 const logOut         = document.querySelector ('#salir button')
 const msj = document.querySelector ('#msj')
-const msjC   = document.querySelector ('#msjC')
 
-usuario == "Nino00" && msjC.classList.remove("no")
 usuario == "Nino00" && msj.classList.remove("no")
 
 if (!usuario)  {
@@ -56,6 +54,53 @@ function cerrar () {        content.classList.add ("no"),
                         }                            
 
 //-------------------------------------------
+const loading = document.querySelector ("#loading")
+
+//-------------------- MENU --------------------
+
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+                        
+navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("nav-menu_visible");
+                        
+            if (navMenu.classList.contains("nav-menu_visible")) {
+                navToggle.setAttribute("aria-label", "Cerrar menú");
+            } else {
+                 navToggle.setAttribute("aria-label", "Abrir menú");
+                  }
+});
+//-------------------- MENU --------------------             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const lista = (genero) => {
+        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
+        fetch ("./data.json")
+            .then ( (res) => res.json ())
+            .then ( (data) => {
+                console.log (data)
+            })
+        
+        
+        }
+
+
+
+
+
+
 
 
 const botonOtros = document.querySelector ('.otros')
@@ -65,7 +110,7 @@ const botonOtros = document.querySelector ('.otros')
         cerrarOtros.onclick     = () => {listaOtros.classList.add ("no"), abrir()}
         
 const botonRock = document.querySelector ('.rock')
-botonRock.onclick       = () => {listaRock.classList.remove ("no"),cerrar()}
+botonRock.onclick       = () => {listaRock.classList.remove ("no"),cerrar()   }
         const cerrarRock        = document.querySelector ('#listaRock button')
         cerrarRock.onclick      = () => {listaRock.classList.add ("no"), abrir()}
 
@@ -81,22 +126,8 @@ botonReggae.onclick     = () => {listaReggae.classList.remove ("no"),cerrar()}
 
 
 //-------------------------------------------
-const loading = document.querySelector ("#loading")
-
-const menubtn = document.querySelector ('#menuBtn')
-const listita = document.querySelector ('#menuC')
-
-menubtn.addEventListener('click', ()=>{
-    listita.classList.remove('no')
 
 
-})
-
-const exito = document.querySelector ('#exito')
-exito.addEventListener('click', ()=>{
-    listita.classList.add('no')
-
-
-})
-
+        
+      
 

@@ -1,14 +1,36 @@
-[{
-    "carga": "<img id='loading' class='no' src='./imagenes/loading.gif'>",
-    "rock": " <iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/2I8Rw6iUGllvIStgmqkqAp?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>"
-    ,
-    "reggae": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/5JdzkGYJrDUW9XnJBV0gNc?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen=''allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>" 
-    ,
-    "rockNacional": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/10uWkZRt7gcjOwIEHypXqK?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>"
-    ,
-    "otros": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/3M9Bh71DFCXQKvtZbsUmgn?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>"
- 
-}]
+[   {"carga": "<img id='loading' class='no' src='./imagenes/loading.gif'>"},
+    
+    
+{ "rock":{
+    "titulo": "<div class='subtitulo'> <div class='sub'>Rock</div>",
+    "boton": "<div><button class='atras boton'>Atras</button> </div></div>",
+    "enlace": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/2I8Rw6iUGllvIStgmqkqAp?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>"
+    }
+},
+
+{ "reggae":{
+    "titulo": "<div class='subtitulo'> <div class='sub'>Reggae</div>",
+    "boton": "<div><button class='atras boton'>Atras</button> </div></div>",
+    "enlace": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/5JdzkGYJrDUW9XnJBV0gNc?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen=''allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>" 
+    }
+},
+
+{ "nacional":{
+    "titulo": "<div class='subtitulo'> <div class='sub'>Rock Nacional</div>",
+    "boton": "<div><button class='atras boton'>Atras</button> </div></div>",
+    "enlace": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/10uWkZRt7gcjOwIEHypXqK?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>"
+    }
+},
+
+{ "otros":{
+    "titulo": "<div class='subtitulo'> <div class='sub'>Otros...</div>",
+    "boton": "<div><button class='atras boton'>Atras</button> </div></div>",
+    "enlace": "<iframe style='border-radius:1px' src='https://open.spotify.com/embed/playlist/3M9Bh71DFCXQKvtZbsUmgn?utm_source=generator' width='100%' height='480' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>"
+    }
+}
+
+
+]
 
 
 

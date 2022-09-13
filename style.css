@@ -12,6 +12,132 @@ body{
     background-size: cover;}
 footer { margin-top: auto }
 
+
+
+
+
+ /* --------------------------MENU--------------------------------- */
+
+
+
+ .header {
+    font-family: 'Silkscreen', cursive;;
+    height: auto;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.747);
+    box-shadow: 2px 0px 5px 2px yellow;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; align-content: center;
+  }
+  .logo {
+    font-size: 4vh;
+    font-weight: bold;
+    padding-bottom: 1vh;
+    padding-left: 1.8vh;
+    color: white;
+    width: 100%;
+    height: 100%;
+  }
+  a{text-decoration: none;}
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    align-self: center;
+  }
+  .nav-menu li a {
+   padding: 2vh;
+   color: white;
+  }
+  .nav-menu-item {
+    font-size: 3.7vh;
+    width: 100%;
+    height: 100%;
+  }
+  .nav a:hover {
+    background-color: rgba(255, 255, 0, 0.767);
+    color: black;
+    transition: 0.3s;
+  }
+  /* TOGGLE */
+  .nav-toggle {
+    color: white;
+    background:none;
+    border: none;
+    font-size: 150%;
+    cursor: pointer;
+    display: none;
+    padding: 3vh;
+  }
+  .cara{
+    max-width: 9vh;
+    max-height: 9vh;
+    margin: -0.4vh -1vh -2vh 0vh;
+  }
+  .portada{      padding: 5px;   text-align: center; }
+  .portada img{  max-width: 25vh;    }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 125%;
+      padding: 13px 0px;
+    }.cara{
+      margin: -2vh 2vh -3vh 0vh;
+    }
+    .nav-menu {
+      background-color: rgba(0, 0, 0, 0.849);
+      box-shadow: -2px 1px 4px 4px yellow;
+      flex-direction: column;
+      text-align: start;
+      margin: 0;
+      position: fixed;
+      top: calc(30% + 2vh);
+      width: 40%;
+      padding: 1vh;
+      height: auto;
+      left: 110%;
+      transition: left 0.3s;
+    }
+    .nav-menu-item {
+      border-bottom:solid 1px yellow;
+      line-height: 8vh;
+      width: 85%;
+      font-size: 110%;
+    }
+    .nav-menu li a:hover {
+      padding-left: 5vh;
+    }
+    .nav-toggle {
+      display: block;
+    }
+  
+    .nav-menu_visible {
+      left: 60%;
+    }
+    .nav-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+
+
+
+
+
+/* ----------------------------------------------------------- */
+
+
+
+
 .loader {
     position: fixed;
     left: 0px;
@@ -22,47 +148,13 @@ footer { margin-top: auto }
     background: url('./imagenes/loadingg.gif') 50% 50% no-repeat pink;
     opacity: .8;
 }
+
 /* SCROLL */
 *::-webkit-scrollbar {width: 5px; height: 5px; }
 *::-webkit-scrollbar-track {background: black; }
 *::-webkit-scrollbar-thumb {background-color: rgb(252, 252, 29); border-radius: 5px; }
 
-/* MENU */
-.logo{  padding: 5px;   text-align: center;   }
-.logo img{  max-width: 15%;     max-height: 15%;    }
-a{text-decoration: none;}
-.cara{
-    max-width: 7.5vh;
-    max-height: 7.5vh;
-    margin: -1vh -1vh -2vh 0vh;
-}
-.menu {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 2px 0px 5px 2px yellow;
-    background-color: rgba(0, 0, 0, 0.747);
-    font-size: 3.5vh;
-    font-weight: 700;
-    font-family: 'Silkscreen', cursive;
-    width: 100%;
-    margin-bottom: 5vh;
-    }
-    .div1 { grid-area: 1 / 1 / 2 / 3; } .div2 { grid-area: 1 / 3 / 2 / 4; }
-    .div3 { grid-area: 1 / 4 / 2 / 5; } .div4 { grid-area: 1 / 5 / 2 / 6; }
-    .div5 { grid-area: 1 / 6 / 2 / 7; }
-    
-    .menu a{ padding:1.5vh;  color: white;   }
-    .menu a:hover {
-       background-color: rgba(255, 255, 0, 0.767);
-       color: black;
-    }
-
-
-
-/* ---------------------------- */
+/* ------------FORMULARIO----------------- */
 .formulario::placeholder{color: yellow;}
 .formulario{
     background-color: rgba(0, 0, 0, 0.596);
@@ -77,121 +169,12 @@ a{text-decoration: none;}
     text-align: center;
 }
 .formulario:hover{ transform: scale(1.05);}
-input{border: 0;}
-input:focus{outline: none; background-color: black }
-textarea{border: 0;height: auto; width: auto; resize: none;}
-textarea:focus{outline: none; background-color: black }
-.msju{border: solid 1px yellow; max-width: 10vh;}
-/* ---------------------------- */
+input{          border:0;  }
+input:focus{    outline:none;  background-color: black}
+textarea{       border: 0;     height: auto;  width: auto; resize: none}  
+textarea:focus{ outline:none;                 background-color: black}
+.msju{          border:solid 1px yellow;    max-width: 10vh}
 
-#inicio{
-    margin: 5vh auto 6vh;
-    padding-bottom: 5vh;
-    width: 80%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.747);
-    box-shadow: 2px 0px 5px 2px yellow;
-    background-image: url(./imagenes/caraRosa.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 10%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-#loading {
-    max-width: 95%;
-    margin: 2vh;
-    box-shadow: 0px 0px 5px 5px pink;
-    animation-name: carga;
-    transition: all 0.3s;
-    animation-duration: 0.3s;   
-}@keyframes carga {
-    0% {
-      transform:scale(0.3)}
-    25% {
-        transform:scale(0.5)}
-    50% {
-        transform:scale(0.7)}
-    75% {
-        transform:scale(0.9)}
-    100% {
-        transform:scale(1)}
-    }
-.todo {display:flex; flex-direction: column; width: 100%;}
-
-
-
-
-.centrar {display: flex; justify-content: center; align-items: center;
-    text-align: center;}
-.esperando{max-width: 50vh; max-height: 80vh;}
-.holaT{
-    font-size: 250%; color:black;
-    font-weight: 900;
-    -webkit-text-stroke: 0.1px yellow ;
-    font-family: 'Anton', sans-serif;
-    margin: 3vh 2vh 0vh 2vh;
-    display: flex; flex-direction: column;
-}
-
-#content {
-    font-weight: 600;
-    color: white;
-    padding: 2vh 1vh;
-    font-size: 225%;
-    font-family: 'Rajdhani', sans-serif;
-    background-color: rgba(0, 0, 0, 0.459);
-    border-radius: 50px;
-    width: 80%;
-    margin-bottom: 3vh;
-    margin-top: 4vh;
-
-}
-
-
-.generos {display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);}
-#rock { grid-area: 1 / 1 / 2 / 2;} #reggae { grid-area: 1 / 2 / 2 / 3;}
-#nacional { grid-area: 2 / 1 / 3 / 2;} #otros { grid-area: 2 / 2 / 3 / 3;}
-
-hr{border: 0.5px solid yellow; width: 50%;}
-
-.canciones{
-    background-color: rgba(0, 0, 0, 0.61);
-    width: 85%;
-    margin: 4vh 1vh;
-    display: flex; flex-direction: column;
-}
-#listaRock { border: solid 1px yellow; box-shadow: 0px 0px 5px 5px rgba(255, 255, 0, 0.666);}
-#listaReggae { border: solid 1px green; box-shadow: 0px 0px 5px 5px rgba(0, 255, 0, 0.666);}
-#listaNacional { border: solid 1px red; box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.666);}
-#listaOtros { border: solid 1px blue; box-shadow: 0px 0px 5px 5px rgba(0, 140, 255, 0.666);}
-
-.boton:hover {background-color: rgba(255, 255, 0, 0.774);  color: black;}
-.boton{
-    border: solid 2px yellow; margin: 1vh; color: white;
-    font-size: 100%;
-    font-weight: 700;
-    font-family: 'Silkscreen', cursive;
-    padding: 1.5vh; 
-    background-color: rgba(0, 0, 0, 0.671);
-    border-radius: 20px;
-    width: 90%;
-    height: 85%;
-}
-.atras{color:rgb(255, 61, 61); padding: 1.5vh;}
-.sub{font-size: 200%; padding-left: 2vh; margin: 2vh;}
-.subtitulo{display: flex; flex-direction: row;
-        justify-content: space-between; color: white;
-        font-family: 'Silkscreen', cursive;
-        margin-bottom: 2vh;
-        align-items: center;
-} 
-#salir{display: flex; flex-direction: row; justify-content: end; align-items: center; margin-bottom: 1.5vh;}
-#salir button{width: 20%; border-color:red;}
 .contacto{
     background-color: rgba(122, 122, 122, 0.322);
     box-shadow: 0px 0px 2px 2px yellow;
@@ -225,6 +208,141 @@ hr{border: 0.5px solid yellow; width: 50%;}
 
 
 
+/* ---------------------------- */
+
+#inicio{
+    margin: 5vh auto 6vh;
+    padding-bottom: 5vh;
+    width: 80%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.747);
+    box-shadow: 2px 0px 5px 2px yellow;
+    background-image: url(./imagenes/caraRosa.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 10%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loading {
+    max-width: 95%;
+    margin: 2vh;
+    box-shadow: 0px 0px 5px 5px pink;
+    animation-name: carga;
+    transition: all 0.3s;
+    animation-duration: 0.3s;   
+}@keyframes carga {
+    0% {
+      transform:scale(0.3)}
+    25% {
+        transform:scale(0.5)}
+    50% {
+        transform:scale(0.7)}
+    75% {
+        transform:scale(0.9)}
+    100% {
+        transform:scale(1)}
+    }
+
+.todo {
+    display:flex; 
+    flex-direction: column;
+    width: 100%;}
+
+.centrar {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center
+}
+.esperando{
+    max-width: 50vh; 
+    max-height: 80vh
+}
+.holaT{
+    font-size: 250%; color:black;
+    font-weight: 900;
+    -webkit-text-stroke: 0.1px yellow ;
+    font-family: 'Anton', sans-serif;
+    margin: 3vh 2vh 0vh 2vh;
+    display: flex; 
+    flex-direction: column;
+}
+
+#content {
+    font-weight: 600;
+    color: white;
+    padding: 2vh 1vh;
+    font-size: 225%;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: rgba(0, 0, 0, 0.459);
+    border-radius: 50px;
+    width: 80%;
+    margin-bottom: 3vh;
+    margin-top: 4vh;
+}
+
+
+.generos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+#rock{     grid-area: 1 / 1 / 2 / 2;} 
+#reggae{   grid-area: 1 / 2 / 2 / 3;}
+#nacional{ grid-area: 2 / 1 / 3 / 2;} 
+#otros {   grid-area: 2 / 2 / 3 / 3;}
+
+hr{border: 0.5px solid yellow; width: 50%;}
+
+.canciones{
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 85%;
+    margin: 4vh 1vh;
+    display: flex; flex-direction: column;
+}
+#listaRock { 
+    border: solid 1px yellow;
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 0, 0.666);
+}
+#listaReggae { 
+    border: solid 1px green; 
+    box-shadow: 0px 0px 5px 5px rgba(0, 255, 0, 0.666);
+}
+#listaNacional { 
+    border: solid 1px red;
+    box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.666);
+}
+#listaOtros { border: solid 1px blue; 
+    box-shadow: 0px 0px 5px 5px rgba(0, 140, 255, 0.666);
+}
+
+.boton:hover {background-color: rgba(255, 255, 0, 0.774);  color: black;}
+.boton{
+    border: solid 2px yellow; margin: 1vh; color: white;
+    font-size: 100%;
+    font-weight: 700;
+    font-family: 'Silkscreen', cursive;
+    padding: 1.5vh; 
+    background-color: rgba(0, 0, 0, 0.671);
+    border-radius: 20px;
+    width: 90%;
+    height: 85%;
+}
+.atras{color:rgb(255, 61, 61); padding: 1.5vh;}
+.sub{font-size: 200%; padding-left: 2vh; margin: 2vh;}
+.subtitulo{display: flex; flex-direction: row;
+        justify-content: space-between; color: white;
+        font-family: 'Silkscreen', cursive;
+        margin-bottom: 2vh;
+        align-items: center;
+} 
+#salir{display: flex; flex-direction: row; justify-content: end; align-items: center; margin-bottom: 1.5vh;}
+#salir button{width: 20%; border-color:red;}
+
+
+
 
 /* FOOTER */
 .pie{
@@ -245,54 +363,39 @@ hr{border: 0.5px solid yellow; width: 50%;}
     max-width: 4.5vh;
     max-height: 4.5vh;
 }
-.celu{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr;
-    color: white;
-    box-shadow: 2px 0px 5px 2px yellow;
-    background-color: rgba(0, 0, 0, 0.747);
-    font-size: 3.5vh;
-    font-weight: 700;
-    font-family: 'Silkscreen', cursive;
-    width: 100%;
-}
-.celu1:hover{background-color: rgba(255, 255, 0, 0.767); }
-.menubtn:hover{
-    filter: brightness(0%);
-    -webkit-filter: brightness(0%);
-    -moz-filter: brightness(0%);}
-    
-.celu0:hover{background-color: rgba(255, 255, 0, 0.767); 
-color: black;}
-.celu0 { grid-area: 1 / 1 / 2 / 8;  color:white;   text-align: center; padding:1.3vh 0vh 1vh 1vh;}
-.celu1 { grid-area: 1 / 8 / 2 / 9;     text-align: center;}
-.menubtn{
-    padding:1.5vh 2.5vh 1.5vh 2.5vh;
-    max-width: 6vh;
-    max-height: 6vh;
-    position: relative;
-    cursor: pointer;
-    vertical-align: top;
-}
 
+/* --------------MENSAJES---------------- */
 .msj{ color: white; font-family: 'Rajdhani', sans-serif; ;
     align-self:flex-start;  margin: 2vh 0vh 6vh 3vh; width: 80%;
 }
-.sub{border-bottom: solid 2px; margin-left: 1.5vh; margin-bottom: 6vh; }    
-#listaMensajes { margin-left: 5vh;padding-bottom: 5vh; }    
-.letraMsj{color: yellow; margin-right: 1vh; margin-bottom: 1vh;} 
-#borrar { width: 30vh; font-size: smaller;}
+.sub{
+    border-bottom: solid 2px; 
+    margin-left: 1.5vh;
+    margin-bottom: 6vh; 
+}    
+#listaMensajes { 
+    margin-left: 5vh;
+    padding-bottom: 5vh; 
+}    
+.letraMsj{
+    color: yellow; 
+    margin-right: 1vh; 
+    margin-bottom: 1vh;
+} 
+#borrar { 
+    width: 30vh; 
+    font-size: smaller;}
+/* ------------------------------ */
 
-.no{display: none;}
-.celu{display: none;}
+.no{display: none; }
+
 
 .listaD{
     position: absolute;
     top: 5; right: 0;
     background-color: rgba(0, 0, 0, 0.849);
     box-shadow: -2px 1px 4px 4px yellow;
-    width: 40%; height: auto;
+    width: 50%; height: auto;
     text-align: left;
     margin-top: 0.7vh;
     font-weight: 700;
@@ -301,35 +404,6 @@ color: black;}
 }
 
 
-  
-.listita{
-    display: flex; flex-direction: column;
-    font-size:80%;
-    width: 100%;
-}
-.listita a{
-    text-decoration: none;
-    color: white;
-    padding: 2.5vh 0vh 2.5vh 2vh;
-    border-bottom: solid 1px white;
-    width: 85%;
-}
-.listita a:hover{
-    background-color: rgba(255, 255, 0, 0.993);
-    color: black;
-    padding-left: 3.5vh;
-}
-
-#exito{
-    border-color: red;
-    font-size: medium;
-    width: 50%;
-    text-align: center;
-    margin-left: 25%
-}
 
 
-@media only screen and (max-width: 768px) {.celu{display:grid;} .menu{display:none}
-
-}
 @media only screen and (max-width: 480px) {.sub{font-size: 100%;}}
