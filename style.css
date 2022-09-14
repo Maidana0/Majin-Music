@@ -407,3 +407,17 @@ hr{border: 0.5px solid yellow; width: 50%;}
 
 
 @media only screen and (max-width: 480px) {.sub{font-size: 100%;}}
+.error{
+ 
+  font-size: 150%; color:pink;
+  font-weight: 900;
+  -webkit-text-stroke: 0.1px red ;
+  font-family: 'Anton', sans-serif;
+  
+  padding: 1px 10vh;
+  background-image: url(./imagenes/error1.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
+  height: 40vh;
+}

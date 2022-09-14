@@ -69,65 +69,87 @@ navToggle.addEventListener("click", () => {
             } else {
                  navToggle.setAttribute("aria-label", "Abrir menú");
                   }
-});
-//-------------------- MENU --------------------             
+});         
+//------------- ----LISTAS---- ------------------
+const listaRock =  document.querySelector("#listaRock")
+const listaReggae =  document.querySelector("#listaReggae")
+const listaNacional =  document.querySelector("#listaNacional")
+const listaOtros =  document.querySelector("#listaOtros")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-const lista = (genero) => {
+//------------- LISTA ROCK ------------------
+const listaR = () => {
         // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
         fetch ("./data.json")
-            .then ( (res) => res.json ())
-            .then ( (data) => {
-                console.log (data)
-            })
-        
-        
-        }
-
-
-
-
-
-
-
-
-const botonOtros = document.querySelector ('.otros')
- botonOtros.onclick      = () => {listaOtros.classList.remove ("no"), cerrar() } 
-
-        const cerrarOtros       = document.querySelector ('#listaOtros button')
-        cerrarOtros.onclick     = () => {listaOtros.classList.add ("no"), abrir()}
-        
+        .then ( (res) => res.json ())
+        .then ( (data) => {
+        listaRock.innerHTML=` ${data.carga} ${data.rock.titulo} ${data.rock.boton} ${data.rock.enlace}
+                                `
+        let cerrarRock = document.querySelector ('#listaRock button')
+        cerrarRock.onclick = () => {listaRock.classList.add ("no"), abrir(),listaRock.innerHTML=" " }  
+        })
+        .catch ( () => {
+        listaRock.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        )
+}
 const botonRock = document.querySelector ('.rock')
-botonRock.onclick       = () => {listaRock.classList.remove ("no"),cerrar()   }
-        const cerrarRock        = document.querySelector ('#listaRock button')
-        cerrarRock.onclick      = () => {listaRock.classList.add ("no"), abrir()}
-
+botonRock.onclick = () => {listaRock.classList.remove ("no"),cerrar(), listaR()}
+     
+//------------- LISTA OTROS ------------------
+const listaO = () => {
+        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
+        fetch ("./data.json")
+        .then ( (res) => res.json ())
+        .then ( (data) => {
+        listaOtros.innerHTML=` ${data.carga} ${data.otros.titulo} ${data.otros.boton} ${data.otros.enlace}
+                                `
+        let cerrarOtros = document.querySelector ('#listaOtros button')
+        cerrarOtros.onclick     = () => {listaOtros.classList.add ("no"), abrir()}  
+        })
+        .catch ( () => {
+        listaOtros.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        )
+}
+const botonOtros = document.querySelector ('.otros')
+botonOtros.onclick = () => {listaOtros.classList.remove ("no"), cerrar(), listaO() } 
+        
+//------------- LISTA ROCK NACIONAL ------------------
+const listaRN = () => {
+        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
+        fetch ("./data.json")
+        .then ( (res) => res.json ())
+        .then ( (data) => {
+        listaNacional.innerHTML=` ${data.carga} ${data.nacional.titulo} ${data.nacional.boton} ${data.nacional.enlace}
+                                `
+        let cerrarNacional = document.querySelector ('#listaNacional button')
+        cerrarNacional.onclick = () => {listaNacional.classList.add ("no"), abrir(),listaNacional.innerHTML=" " }  
+        })
+        .catch ( () => {
+        listaNacional.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        )
+}
 const botonNacional = document.querySelector ('.nacional')
-botonNacional.onclick   = () => {listaNacional.classList.remove ("no"),cerrar()}
-        const cerrarNacional    = document.querySelector ('#listaNacional button')
-        cerrarNacional.onclick  = () => {listaNacional.classList.add ("no"), abrir()}
+botonNacional.onclick   = () => {listaNacional.classList.remove ("no"),cerrar(), listaRN()}
 
+//------------- LISTA REGGAE ------------------
+const listaReg = () => {
+        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
+        fetch ("./data.json")
+        .then ( (res) => res.json ())
+        .then ( (data) => {
+        listaReggae.innerHTML=` ${data.carga} ${data.reggae.titulo} ${data.reggae.boton} ${data.reggae.enlace}
+                                `
+        let cerrarReggae = document.querySelector ('#listaReggae button')
+        cerrarReggae.onclick = () => {listaReggae.classList.add ("no"), abrir(),listaReggae.innerHTML=" " }  
+        })
+        .catch ( () => {
+        listaReggae.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        )
+}
 const botonReggae = document.querySelector ('.reggae')
-botonReggae.onclick     = () => {listaReggae.classList.remove ("no"),cerrar()}
-        const cerrarReggae      = document.querySelector ('#listaReggae button')
-        cerrarReggae.onclick    = () => {listaReggae.classList.add ("no"),abrir()}
-
+botonReggae.onclick     = () => {listaReggae.classList.remove ("no"),cerrar(), listaReg()}
 
 //-------------------------------------------
 
 
         
-      
 
