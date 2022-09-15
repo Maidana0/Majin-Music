@@ -25,7 +25,7 @@ navToggle.addEventListener("click", () => {
 
 const listaR = () => {
     // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
-    fetch ("../data.json")
+    fetch ("./data.json")
     .then ( (res) => res.json ())
     .then ( (data) => {
     let listita = document.querySelector("#listas")
