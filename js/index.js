@@ -5,6 +5,7 @@ const inputNombre   = document.querySelector ('#nombre')
 const formNombre    = document.querySelector ('#formulario')
 let usuario         = localStorage.getItem ('usuario')
 const logOut         = document.querySelector ('#salir button')
+
 const msj = document.querySelector ('#msj')
 
 usuario == "Nino00" && msj.classList.remove("no")
@@ -36,8 +37,8 @@ else {
         logOut.classList.remove ("no")
 }
 
-const salir = document.querySelector ('#salir')
-    salir.addEventListener ('click', () => {
+
+logOut.addEventListener ('click', () => {
                         localStorage.removeItem ('usuario')
                         location. reload() }    
                         )
@@ -82,18 +83,18 @@ const listaR = () => {
         fetch ("./data.json")
         .then ( (res) => res.json ())
         .then ( (data) => {
-        listaRock.innerHTML=` ${data.carga} ${data.rock.titulo} ${data.rock.boton} ${data.rock.enlace}
-                                `
-        let cerrarRock = document.querySelector ('#listaRock button')
-        cerrarRock.onclick = () => {listaRock.classList.add ("no"), abrir(),listaRock.innerHTML=" " }  
+        listaRock.innerHTML=` ${data.carga} ${data.rock.titulo} ${data.rock.boton} ${data.rock.enlace}`
+        let cerrarR = document.querySelector ('#listaRock button')
+        cerrarR.onclick     = () => {listaRock.classList.add ("no"), abrir()}  
         })
         .catch ( () => {
-        listaRock.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        listaRock.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>',
+        hola.innerHTML = ". . ."}
         )
 }
 const botonRock = document.querySelector ('.rock')
-botonRock.onclick = () => {listaRock.classList.remove ("no"),cerrar(), listaR()}
-     
+botonRock.onclick = () => {listaRock.classList.remove ("no"), cerrar(), listaR() } 
+ 
 //------------- LISTA OTROS ------------------
 const listaO = () => {
         // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
@@ -106,7 +107,8 @@ const listaO = () => {
         cerrarOtros.onclick     = () => {listaOtros.classList.add ("no"), abrir()}  
         })
         .catch ( () => {
-        listaOtros.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        listaOtros.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>',
+        hola.innerHTML = ". . ."}
         )
 }
 const botonOtros = document.querySelector ('.otros')
@@ -123,8 +125,8 @@ const listaRN = () => {
         let cerrarNacional = document.querySelector ('#listaNacional button')
         cerrarNacional.onclick = () => {listaNacional.classList.add ("no"), abrir(),listaNacional.innerHTML=" " }  
         })
-        .catch ( () => {
-        listaNacional.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        .catch ( () => {listaNacional.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>',
+        hola.innerHTML = ". . ."}
         )
 }
 const botonNacional = document.querySelector ('.nacional')
@@ -142,7 +144,8 @@ const listaReg = () => {
         cerrarReggae.onclick = () => {listaReggae.classList.add ("no"), abrir(),listaReggae.innerHTML=" " }  
         })
         .catch ( () => {
-        listaReggae.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        listaReggae.innerHTML= '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>',
+        hola.innerHTML = ". . ."}
         )
 }
 const botonReggae = document.querySelector ('.reggae')

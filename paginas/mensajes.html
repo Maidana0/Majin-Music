@@ -24,17 +24,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="loader"></div>
-    <header class="header">
-        <div class="portada">
-            <img src="../imagenes/log1.png">
-        </div>
-        <nav class="nav">
-            <a href="../index.html" class="logo"> <img class="cara" src="../imagenes/caracelu.png"> [ Majin - Music ]</a>
-            <button class="nav-toggle" aria-label="Abrir menú">
-              <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
+  <div class="loader"></div>
+  <header class="header">
+    <div class="portada">
+      <img src="../imagenes/log1.png">
+    </div>
+    <nav class="nav">
+      <a href="../index.html" class="logo"> <img class="cara" src="../imagenes/caracelu.png"> [ Majin - Music ]</a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
               <li class="nav-menu-item">
                 <a id="msj" href="#" class="nav-menu-link no">Mensajes</a>
               </li>
@@ -45,39 +45,32 @@
                 <a href="./artistas.html" class="nav-menu-link">Artistas</a>
               </li>
               <li class="nav-menu-item">
-                <a href="./contacto.html" class="nav-menu-link">Contacto</a
-                >
+                <a href="./contacto.html" class="nav-menu-link">Contacto</a>
               </li>
-            </ul>
-          </nav>
-</header>
-
-    <main>
-
-        <div id="inicio"> 
-            <div id="content" class="centrar"> Lista de Mensajes </div>
-                <div class="msj">
-                <h2 class="sub">Mensajes Recibidos:</h2>
-                   
-                <ul id="listaMensajes" > 
-
-                </ul>
-                </div>
-                <div id="borrar">
-                    <button class="boton" type="button">Borrar Todo</button>
-                </div> 
-        </div>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="inicio"> 
+      <div id="content" class="centrar"> Lista de Mensajes </div>
+      <div class="msj">
+        <h2 class="sub">Mensajes Recibidos:</h2>   
+        <ul id="listaMensajes"></ul>
+      </div>
+    <div id="borrar">
+      <button class="boton" type="button">Borrar Todo</button>
+    </div> 
+    </div>
         
-        <div id="salir"><button class="boton corto no" type="button">Salir</button></div> 
-    </main>
+    <div id="salir"><button class="boton corto no" type="button">Salir</button></div> 
+  </main>
 
-    <footer class="pie">
+  <footer class="pie">
        @Copyright 2022 <br>  <a href="https://www.instagram.com/franco_maidana07/" target="_blank">
            <img class="insta" src=".././imagenes/instagram.png" > </a>
         
-    </footer>
-    <script src="../js/mensajes.js"></script>
-    <script src="../js/global.js"></script>
+  </footer>
+    <script defer src="../js/global.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript">
         $(window).load(function() {
@@ -85,6 +78,4 @@
         });
     </script>     
 </body>
-
-
 </html>
