@@ -37,9 +37,10 @@ const listaR = () => {
     } )
 
     })
-    .catch ( () => {
+    .catch ( (err) => {
         (document.querySelector("#listas")).innerHTML= 
-        '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'}
+        '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'
+        console.log(err)}
         )
 }
 document.querySelector("#listas") && listaR()
