@@ -100,7 +100,7 @@ footer { margin-top: auto }
       text-align: start;
       margin: 0;
       position: fixed;
-      top: calc(30% + 2vh);
+      top: calc(30% - 5vh);
       width: 40%;
       padding: 1vh;
       height: auto;
@@ -257,8 +257,8 @@ textarea:focus{ outline:none;                 background-color: black}
     text-align: center
 }
 .esperando{
-    max-width: 50vh; 
-    max-height: 80vh
+    max-width: 100%; 
+    max-height: 100%
 }
 .holaT{
     font-size: 250%; color:black;
@@ -400,12 +400,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
 /* ------------------------------ */
 
 .no{display: none; }
-
-
-
-@media only screen and (max-width: 480px) {.sub{font-size: 100%;}}
 .error{
- 
   font-size: 150%; color:pink;
   -webkit-text-stroke: 0.1px red ;
   font-family: 'Anton', sans-serif;
@@ -416,3 +411,44 @@ hr{border: 0.5px solid yellow; width: 50%;}
   height: 50vh;
 }
 
+
+@media only screen and (max-width: 768px){ 
+  .sub{font-size: 100%;}
+  .error{
+    margin: -1vh 1vh;
+    color: red;  
+    -webkit-text-stroke: 0.1px white
+  }
+  .holaT{
+    color: yellow;   
+    -webkit-text-stroke: 1px black;
+    margin: 2vh 1vh 0vh 1vh;
+  }
+  #hola{
+    margin-bottom: -1vh;
+    padding-bottom: -1vh;
+  }
+  .esperando{
+    max-width: 90%; 
+    max-height: 80vh
+}
+#contacto{
+  width: 90%;
+}
+#inicio{
+  width: 95%;
+}
+#content{
+  margin: 1vh;
+  padding: 1vh;
+}
+.canciones{
+  width: 95%;
+}
+.boton{
+  font-size: 80%;
+  width: 80%;
+}
+.subtitulo {margin-bottom: 1vh;}
+.portada img{  max-width: 15vh;    }
+}
