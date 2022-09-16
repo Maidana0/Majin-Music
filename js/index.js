@@ -8,7 +8,13 @@ const logOut         = document.querySelector ('#salir button')
 
 const msj = document.querySelector ('#msj')
 
-usuario == "Nino00" && msj.classList.remove("no")
+if (usuario === "Nino00"){
+        let nav = document.querySelector("#elmenu")
+        let limsj = document.createElement ('li')
+        limsj.classList.add("nav-menu-item")
+        limsj.innerHTML = '<a id="msj" href="./paginas/mensajes.html" class="nav-menu-link">Mensajes</a>'
+        nav.append (limsj)
+    }
 
 if (!usuario)  {
     formNombre.addEventListener ('submit', (e) => {
@@ -76,10 +82,8 @@ const listaRock =  document.querySelector("#listaRock")
 const listaReggae =  document.querySelector("#listaReggae")
 const listaNacional =  document.querySelector("#listaNacional")
 const listaOtros =  document.querySelector("#listaOtros")
-
 //------------- LISTA ROCK ------------------
 const listaR = () => {
-        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
         fetch ("./data.json")
         .then ( (res) => res.json ())
         .then ( (data) => {
@@ -94,10 +98,9 @@ const listaR = () => {
 }
 const botonRock = document.querySelector ('.rock')
 botonRock.onclick = () => {listaRock.classList.remove ("no"), cerrar(), listaR() } 
- 
+
 //------------- LISTA OTROS ------------------
 const listaO = () => {
-        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
         fetch ("./data.json")
         .then ( (res) => res.json ())
         .then ( (data) => {
@@ -113,10 +116,9 @@ const listaO = () => {
 }
 const botonOtros = document.querySelector ('.otros')
 botonOtros.onclick = () => {listaOtros.classList.remove ("no"), cerrar(), listaO() } 
-        
+
 //------------- LISTA ROCK NACIONAL ------------------
 const listaRN = () => {
-        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
         fetch ("./data.json")
         .then ( (res) => res.json ())
         .then ( (data) => {
@@ -131,10 +133,8 @@ const listaRN = () => {
 }
 const botonNacional = document.querySelector ('.nacional')
 botonNacional.onclick   = () => {listaNacional.classList.remove ("no"),cerrar(), listaRN()}
-
 //------------- LISTA REGGAE ------------------
 const listaReg = () => {
-        // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
         fetch ("./data.json")
         .then ( (res) => res.json ())
         .then ( (data) => {
@@ -150,9 +150,6 @@ const listaReg = () => {
 }
 const botonReggae = document.querySelector ('.reggae')
 botonReggae.onclick     = () => {listaReggae.classList.remove ("no"),cerrar(), listaReg()}
-
 //-------------------------------------------
-
-
         
 

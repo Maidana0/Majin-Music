@@ -89,7 +89,7 @@ footer { margin-top: auto }
   @media (max-width: 768px) {
     .logo {
       font-size: 125%;
-      padding: 13px 0px;
+      padding: 16px 0px;
     }.cara{
       margin: -2vh 2vh -3vh 0vh;
     }
@@ -119,12 +119,21 @@ footer { margin-top: auto }
     .nav-toggle {
       display: block;
     }
+    .nav-toggle:hover {
+      background-color: rgba(255, 255, 0, 0.767);
+      color: black;
+      transition: 0.3s;
+
+    }
   
     .nav-menu_visible {
       left: 60%;
     }
     .nav-toggle:focus:not(:focus-visible) {
       outline: none;
+      background-color: black;
+      border: solid 1px yellow;
+      color: yellow;
     }
   }
 
@@ -155,17 +164,18 @@ footer { margin-top: auto }
 *::-webkit-scrollbar-thumb {background-color: rgb(252, 252, 29); border-radius: 5px; }
 
 /* ------------FORMULARIO----------------- */
+#formulario{flex-direction: column;}
 .formulario::placeholder{color: yellow;}
 .formulario{
     background-color: rgba(0, 0, 0, 0.596);
     box-shadow: 0px 0px 2px 2px yellow;
+    margin-bottom: 2vh;
     width: 70%;
     height: auto;
     color: yellow;
     font-size: 135%;
     font-family: 'Rajdhani', sans-serif;
     padding: 2vh;
-    margin-bottom: 7vh;
     text-align: center;
 }
 .formulario:hover{ transform: scale(1.05);}
@@ -331,11 +341,10 @@ hr{border: 0.5px solid yellow; width: 50%;}
     height: 85%;
 }
 .atras{color:rgb(255, 61, 61); padding: 1.5vh;}
-.sub{font-size: 200%; padding-left: 2vh; margin: 2vh;}
 .subtitulo{display: flex; flex-direction: row;
         justify-content: space-between; color: white;
         font-family: 'Silkscreen', cursive;
-        margin-bottom: 2vh;
+        margin: 1.5vh;
         align-items: center;
 } 
 #salir{display: flex; flex-direction: row; justify-content: end; align-items: center; margin-bottom: 1.5vh;}
@@ -367,7 +376,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
 
 .playlist{
   width: 90%;
-  margin: 5vh auto;
+  margin: 2vh auto 10vh;
   box-shadow: 0px 0px 5px 5px rgba(255, 255, 0, 0.801);
   border-radius:12px;
   
@@ -381,9 +390,10 @@ hr{border: 0.5px solid yellow; width: 50%;}
     align-self:flex-start;  margin: 2vh 0vh 6vh 3vh; width: 80%;
 }
 .sub{
+    font-size: 200%;
     border-bottom: solid 2px; 
-    margin-left: 1.5vh;
-    margin-bottom: 6vh; 
+    padding: 1vh;
+    margin-left: 1vh;
 }    
 #listaMensajes { 
     margin-left: 5vh;
@@ -399,7 +409,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
     font-size: smaller;}
 /* ------------------------------ */
 
-.no{display: none; }
+
 .error{
   font-size: 150%; color:pink;
   -webkit-text-stroke: 0.1px red ;
@@ -410,10 +420,11 @@ hr{border: 0.5px solid yellow; width: 50%;}
   background-size:contain;
   height: 50vh;
 }
-
+.ok{width: 30%;
+  margin-bottom: 7vh;}
 
 @media only screen and (max-width: 768px){ 
-  .sub{font-size: 100%;}
+  .sub{font-size: 150%;}
   .error{
     margin: -1vh 1vh;
     color: red;  
@@ -449,6 +460,7 @@ hr{border: 0.5px solid yellow; width: 50%;}
   font-size: 80%;
   width: 80%;
 }
-.subtitulo {margin-bottom: 1vh;}
 .portada img{  max-width: 15vh;    }
+.ok{width: 30%;}
 }
+.no{display: none; }

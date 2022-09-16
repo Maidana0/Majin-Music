@@ -1,7 +1,14 @@
 const logOut= document.querySelector ('#salir button')
 let usuario = localStorage.getItem ('usuario')
 const msj   = document.querySelector ('#msj')
-usuario == "Nino00" && msj.classList.remove("no")                        
+  
+if (usuario === "Nino00"){
+    let nav = document.querySelector("#elmenu")
+    let limsj = document.createElement ('li')
+    limsj.classList.add("nav-menu-item")
+    limsj.innerHTML = '<a id="msj" href="./mensajes.html" class="nav-menu-link">Mensajes</a>'
+    nav.append (limsj)
+}
 usuario && logOut.classList.remove ("no")
 logOut.addEventListener ('click', () => {
                         localStorage.removeItem ('usuario')
@@ -20,11 +27,8 @@ navToggle.addEventListener("click", () => {
                   }
 });
 //-------------------- MENU --------------------                       
-
 //-------------------- LISTAS -------------------- 
-
 const listaR = () => {
-    // fetch ("https://raw.githubusercontent.com/Maidana0/Majin-Music/main/data.json")
     fetch ("../data.json")
     .then ( (res) => res.json ())
     .then ( (data) => {
@@ -34,8 +38,7 @@ const listaR = () => {
                 div.classList.add("playlist")
                 div.innerHTML = `${li.li}`
                 listita.append (div)
-    } )
-
+                })
     })
     .catch ( (err) => {
         (document.querySelector("#listas")).innerHTML= 
