@@ -386,7 +386,12 @@ hr{border: 0.5px solid yellow; width: 50%;}
 /* --------------LISTAS---------------- */
 #listas{width: 100%; }
 #listas2{width: 100%; }
-
+.carg{
+  background-image: url("./imagenes/loading\ \(1\).gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
 .playlist{
   width: 90%;
   margin: 2vh auto 10vh;
