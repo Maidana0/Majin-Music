@@ -60,7 +60,7 @@ const lista1 = () => {
     .catch ( (err) => {
         (document.querySelector("#listas")).innerHTML= 
         '<h1 class="error centrar">Ocurrio un Error inesperado. <br> Vuelva a intentarlo</h2>'
-        console.log(err)}
+        console.log(err), (document.querySelector("#mas")).classList.add("no")}
         )
 }
 document.querySelector("#listas") && lista1()
@@ -157,6 +157,22 @@ if (document.querySelector("#artistas")){
 const btnMostrar = document.querySelector("#mas")
 const btnNoMostrar = document.querySelector("#menos")
 const artistas = document.querySelector ("#artistas")
+const artistas0 = document.querySelector ("#artistas0")
+
+
+const artista01 = () => {
+  fetch ("../data.json")
+  .then ( (res) => res.json ())
+  .then ( (data) =>{
+              data.artistas0.forEach ( (todo ) => {
+              let div = document.createElement ('div')
+              div.classList.add("artista-lista")
+              div.innerHTML = `${todo.art}`
+              artistas0.append (div)
+              })
+  })
+}
+artista01()
 
 const artista00 = () => {
   fetch ("../data.json")
