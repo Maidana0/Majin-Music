@@ -7,7 +7,7 @@ if (usuario === "Nino00"){
     let limsj = document.createElement ('li')
     limsj.classList.add("nav-menu-item")
     limsj.innerHTML = '<a id="msj" href="./mensajes.html" class="nav-menu-link">Mensajes</a>'
-    nav.append (limsj)
+    nav.prepend (limsj)
 }
 usuario && logOut.classList.remove ("no")
 logOut.addEventListener ('click', () => {
@@ -26,9 +26,26 @@ navToggle.addEventListener("click", () => {
                  navToggle.setAttribute("aria-label", "Abrir menú");
                   }
 });
-//-------------------- MENU --------------------                       
+//-------------------- SCROLL --------------------        
+if (document.getElementById("btn_scrolltop")){
+const btn_scrolltop = document.getElementById("btn_scrolltop")
+  btn_scrolltop.addEventListener('click', () => {
+    window.scrollTo(0, 0)
+  })
+ window.onscroll = () => {
+  add_btn_scrolltop()
+}
+
+const add_btn_scrolltop = () => {
+  if (window.scrollY < 500) {
+    btn_scrolltop.classList.remove("btn-scrolltop-on")
+  } else {
+    btn_scrolltop.classList.add("btn-scrolltop-on")
+  }
+} 
+}
 //-------------------- LISTAS -------------------- 
-const listaR = () => {
+const lista1 = () => {
     fetch ("../data.json")
     .then ( (res) => res.json ())
     .then ( (data) => {
@@ -46,7 +63,38 @@ const listaR = () => {
         console.log(err)}
         )
 }
-document.querySelector("#listas") && listaR()
+document.querySelector("#listas") && lista1()
+
+if (document.querySelector("#listas")){
+let listita2 = document.querySelector("#listas2")
+const lista2 = () => {
+  fetch ("../data.json")
+  .then ( (res) => res.json ())
+  .then ( (data) => {
+  data.listas2.forEach ( (li ) => {
+              let div2 = document.createElement ('div')
+              div2.classList.add("playlist")
+              div2.innerHTML = `${li.li}`
+              listita2.append (div2)
+              })
+  })
+}
+const btnMostrar = document.querySelector("#mas")
+const btnNoMostrar = document.querySelector("#menos")
+
+btnMostrar.addEventListener('click', ()=>{
+  listita2.classList.remove ("no")
+  lista2()
+  btnMostrar.classList.add ("no")
+  btnNoMostrar.classList.remove ("no")
+})
+btnNoMostrar.addEventListener('click',()=>{
+  listita2.innerHTML = ' '
+  btnMostrar.classList.remove ("no")
+  btnNoMostrar.classList.add ("no")
+  listita2.classList.add ("no")
+})
+}
 //-------------------- MENSAJES -------------------- 
 if (document.getElementById('listaMensajes')){
         const contacto = JSON.parse(localStorage.getItem ('mensaje'))
@@ -77,7 +125,7 @@ if (document.querySelector("#contacto")){
         const contactMensaje=  document.querySelector ('#mensaje')
         const guardar =  document.querySelector ('#formContact button')
         const msjViejos = JSON.parse (localStorage.getItem ('mensaje') ) || []
-
+// No se como hacer para que no se envie sin completar todos los datos o que se cumpla el required del html jaja
 const guardarMensaje = (e) => { e.preventDefault()
     const nombre    = contactNombre.value;   const email     = contactEmail.value
     const motivo    = contactMotivo.value;   const mensaje   = contactMensaje.value
@@ -99,9 +147,39 @@ const guardarMensaje = (e) => { e.preventDefault()
                 fontWeight: '900',
             },
     }).showToast() 
+  
 }
 guardar.addEventListener ('click', (guardarMensaje) )
 }
 //-------------------- ARTISTA -------------------- 
 
+if (document.querySelector("#artistas")){
+const btnMostrar = document.querySelector("#mas")
+const btnNoMostrar = document.querySelector("#menos")
+const artistas = document.querySelector ("#artistas")
 
+const artista00 = () => {
+  fetch ("../data.json")
+  .then ( (res) => res.json ())
+  .then ( (data) =>{
+              data.artistas.forEach ( (todo ) => {
+              let div = document.createElement ('div')
+              div.classList.add("artista-lista")
+              div.innerHTML = `${todo.art}`
+              artistas.append (div)
+              })
+  })
+}
+btnMostrar.addEventListener('click', ()=>{
+    artistas.classList.remove ("no")
+    artista00()
+    btnMostrar.classList.add ("no")
+    btnNoMostrar.classList.remove ("no")
+})
+btnNoMostrar.addEventListener('click',()=>{
+    artistas.innerHTML = ' '
+    btnMostrar.classList.remove ("no")
+    btnNoMostrar.classList.add ("no")
+    artistas.classList.add ("no")
+})
+}

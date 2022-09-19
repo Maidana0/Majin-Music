@@ -13,7 +13,7 @@ if (usuario === "Nino00"){
         let limsj = document.createElement ('li')
         limsj.classList.add("nav-menu-item")
         limsj.innerHTML = '<a id="msj" href="./paginas/mensajes.html" class="nav-menu-link">Mensajes</a>'
-        nav.append (limsj)
+        nav.prepend (limsj)
     }
 
 if (!usuario)  {

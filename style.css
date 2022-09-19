@@ -1,5 +1,6 @@
 *{ padding: 0;  margin: 0;}
-html {height: 100%}
+html {height: 100%;
+  scroll-behavior: smooth;}
 body{
     display: flex;
     flex-direction: column;
@@ -12,13 +13,7 @@ body{
     background-size: cover;}
 footer { margin-top: auto }
 
-
-
-
-
  /* --------------------------MENU--------------------------------- */
-
-
 
  .header {
     font-family: 'Silkscreen', cursive;;
@@ -162,6 +157,23 @@ footer { margin-top: auto }
 *::-webkit-scrollbar {width: 5px; height: 5px; }
 *::-webkit-scrollbar-track {background: black; }
 *::-webkit-scrollbar-thumb {background-color: rgb(252, 252, 29); border-radius: 5px; }
+
+.btn-scrolltop {
+  position: fixed;
+  bottom: 15%;
+  right: 15px;
+  padding: 15px 20px;
+  background: black;
+  color: white;
+  border: 2px solid yellow;
+  border-radius: 100%;
+  cursor: pointer;
+  transform: translateY(150px);
+  transition: 0.5s;
+}
+.btn-scrolltop-on {
+  transform: translateY(0);
+}
 
 /* ------------FORMULARIO----------------- */
 #formulario{flex-direction: column;}
@@ -373,17 +385,18 @@ hr{border: 0.5px solid yellow; width: 50%;}
 
 /* --------------LISTAS---------------- */
 #listas{width: 100%; }
+#listas2{width: 100%; }
 
 .playlist{
   width: 90%;
   margin: 2vh auto 10vh;
   box-shadow: 0px 0px 5px 5px rgba(255, 255, 0, 0.801);
   border-radius:12px;
-  
+  animation: carga 0.3s;
   background-image: url("./imagenes/loading\ \(1\).gif");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain
+  background-size: 30%;
 }
 /* --------------MENSAJES---------------- */
 .msj{ color: white; font-family: 'Rajdhani', sans-serif; ;
@@ -408,6 +421,64 @@ hr{border: 0.5px solid yellow; width: 50%;}
     width: 30vh; 
     font-size: smaller;}
 /* ------------------------------ */
+/* --------------ARTISTAS---------------- */
+.artistass{
+box-shadow: 0px 0px 2px 2px yellow;
+margin: 0vh;   padding: 1vh;
+background-color: rgba(0, 0, 0, 0.589);
+}
+.foto{
+  border-radius: 100%;
+  max-width: 20%;
+  margin: 5px;
+}
+.artista-contenido{
+  width: 95%;
+  margin: 5vh auto;
+  font-family: 'Silkscreen', cursive;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+}
+.artista-bloque{
+  background-color: rgba(0, 0, 0, 0.800);
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 0, 0.700);
+  border-radius: 18px;
+  padding: 2.5vh; margin: 2.5vh; 
+  animation: carga 0.4s;
+}
+.lista{
+  box-shadow: 0px 0px 4px 4px white;
+  border-radius: 12px;
+  background-image: url("./imagenes/loading\ \(2\).gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+.artista-lista{
+  margin: 1vh; 
+}
+.titulo-contenido{
+  display: flex; flex-direction: row;
+  color: white; font-size: 100%;
+}
+
+.mostrar{
+  margin: -4vh auto 1vh;
+  width: 35%; color: yellow;
+  border-color: yellow;
+  font-size: 100%;
+  font-weight: 500;
+  font-family: 'Rajdhani', sans-serif;
+  transition: 0.5s;
+
+}
+.mostrar:hover{
+  background-color: black; color: yellow;
+  font-weight: 800;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+/* ------------------------------ */
+
 
 
 .error{
@@ -462,5 +533,16 @@ hr{border: 0.5px solid yellow; width: 50%;}
 }
 .portada img{  max-width: 15vh;    }
 .ok{width: 30%;}
+/* ARTISTAS */
+.artistass{
+  margin: 0vh;
+  padding: 1vh;
 }
-.no{display: none; }
+.artista-contenido{
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+.focus{
+  box-shadow: 0px 0px 4px 4px red;
+}
+.no{display: none;}
